@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Builder - PC Part Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar-top">
+        <div class="navbar-left">
+            <a href="index.html">
+                <img src="images/logo.png" alt="logo">
+            </a>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li><a href="#"><i class='bx bx-user'></i> Username</a></li>
+                <li><a href="#"><i class='bx bx-help-circle'></i> Help</a></li>
+                <li><a href="#"><i class='bx bx-log-out'></i> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-bottom">
+        <ul>
+            <li><a href="builder.html" class="active"><img src="images/icons/white/tools.png" alt="">Builder</a></li>
+            <li><a href="#"><img src="images/icons/white/cpu.png" alt="">Products</a></li>
+            <li><a href="#"><img src="images/icons/white/notes.png" alt="">Guides</a></li>
+            <li><a href="#"><img src="images/icons/white/pc.png" alt="">Completed Results</a></li>
+        </ul>
+    </div>
+
+    <!-- System Builder -->
+    <div class="system-builder">
+        <div class="builder-header">
+            <h1>Choose Your Parts</h1>
+            <div class="builder-tabs">
+                <button class="builder-tab active">Overview</button>
+                <button onclick="window.location.href='builder-price-by-merchant.html'"  class="builder-tab">Price By Merchant</button>
+            </div>
+        </div>
+
+        <div class="system-status">
+            <div class="status-bar">
+                <div class="compatibility-status">
+                    <i class='bx bx-check-circle'></i>
+                    <span>Compatible Components Selected</span>
+                </div>
+                <div class="wattage-status">
+                    <img src="images/icons/white/energy.png" alt="">
+                    <span>Estimated Wattage: 250W</span>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button class="save-as-btn">
+                    <i class='bx bx-download'></i>
+                    Save As
+                </button>
+                <button class="start-new-btn">
+                    <i class='bx bx-plus'></i>
+                    Start New
+                </button>
+            </div>
+        </div>
+
+        <div class="builder-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Component</th>
+                        <th>Selection</th>
+                        <th>Base</th>
+                        <th>Shipping</th>
+                        <th>Availability</th>
+                        <th>Price</th>
+                        <th>Where</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- CPU -->
+                    <tr class="component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">CPU</a>
+                        </td>
+                        <td class="selection-cell">
+                            <div class="selected-part">
+                                <img src="images/computer-parts/cover-photo/cpu.jpg" alt="CPU">
+                                <div class="part-details">
+                                    <a href="#">AMD Ryzen 7 9800X3D 4.7 GHz 8-Core Processor</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$472.02</td>
+                        <td>—</td>
+                        <td class="availability">In stock</td>
+                        <td class="price">$472.02</td>
+                        <td class="merchant">
+                            <img src="images/merchants/lazada.png" alt="Amazon">
+                        </td>
+                        <td class="actions">
+                            <button class="buy-btn">Buy</button>
+                            <button class="remove-btn"><i class='bx bx-x'></i></button>
+                        </td>
+                    </tr>
+                    <!-- CPU Cooler -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">CPU Cooler</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose A CPU Cooler
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Motherboard -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Motherboard</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose A Motherboard
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Memory -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Memory</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose Memory
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Storage -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Storage</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose Storage
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Video Card -->
+                    <tr class="component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Video Card</a>
+                        </td>
+                        <td class="selection-cell">
+                            <div class="selected-part">
+                                <img src="images/computer-parts/cover-photo/video-card.jpg" alt="Video Card">
+                                <div class="part-details">
+                                    <a href="#">MSI GeForce RTX 3060 Ventus 2X 12G GeForce RTX 3060 12GB 12 GB Video Card</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>$299.99</td>
+                        <td>FREE</td>
+                        <td class="availability">In stock</td>
+                        <td class="price">$299.99</td>
+                        <td class="merchant">
+                            <img src="images/merchants/shopee.png" alt="MSI">
+                        </td>
+                        <td class="actions">
+                            <button class="buy-btn">Buy</button>
+                            <button class="remove-btn"><i class='bx bx-x'></i></button>
+                        </td>
+                    </tr>
+                    <!-- Video Card 2 -->
+                    <tr class="add-component-row">
+                        <td colspan="10">
+                            <button class="add-video-card-btn">
+                                <i class='bx bx-plus'></i> Add Another Video Card
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Case -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Case</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose A Case
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Power Supply -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Power Supply</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose A Power Supply
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Operating System -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Operating System</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose An Operating System
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Monitor -->
+                    <tr class="add-component-row">
+                        <td class="component-type">
+                            <a href="#" class="component-link">Monitor</a>
+                        </td>
+                        <td colspan="9">
+                            <button class="choose-part-btn">
+                                <i class='bx bx-plus'></i> Choose A Monitor
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="builder-footer">
+            <div class="total-price">
+                <span>Total:</span>
+                <span class="price">$772.01</span>
+            </div>
+            <button class="buy-from">Buy From Shopee</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo icon.png" alt="">
+            </div>
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>PCPP</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Builder</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="#">Guides</a></li>
+                        <li><a href="#">Completed Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Account</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Your Account</a></li>
+                        <li><a href="#">Favorite Parts</a></li>
+                        <li><a href="#">Saved Part Lists</a></li>
+                        <li><a href="#">Log Out</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Information</h3>
+                    <hr>
+                    <ul>
+                        <li><a href="#">Downloads</a></li>
+                        <li><a href="#">User Code of Conduct</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+/* Price By Merchant Styles */
+.builder-table.merchant-view table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.builder-table.merchant-view th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: right;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.builder-table.merchant-view th:first-child,
+.builder-table.merchant-view th:nth-child(2) {
+    text-align: left;
+}
+
+.builder-table.merchant-view td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.builder-table.merchant-view td:first-child,
+.builder-table.merchant-view td:nth-child(2) {
+    text-align: left;
+}
+
+.builder-table.merchant-view .component-type {
+    width: 120px;
+}
+
+.builder-table.merchant-view .component-link {
+    color: #e48435;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.builder-table.merchant-view .selection-cell {
+    min-width: 400px;
+    max-width: 500px;
+}
+
+.builder-table.merchant-view .selected-part {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.builder-table.merchant-view .selected-part img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.builder-table.merchant-view .part-details {
+    flex: 1;
+}
+
+.builder-table.merchant-view .part-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.builder-table.merchant-view .availability {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.builder-table.merchant-view .price {
+    color: #28a745;
+    font-weight: 600;
+}
+
+.builder-table.merchant-view .actions {
+    width: 100px;
+    text-align: right;
+}
+
+.builder-table.merchant-view .buy-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.builder-table.merchant-view .buy-btn:hover {
+    background-color: var(--green-color-hover);
+}
+
+.builder-table.merchant-view .total-row td {
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.builder-table.merchant-view .total-price {
+    color: #28a745;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.merchant-section {
+    margin: 2rem 5rem;
+}
+
+.merchant-header {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.merchant-logo {
+    height: 40px;
+    width: auto;
+    margin-left: 4rem;
+} 
