@@ -131,21 +131,41 @@ body {
     gap: 8px;
 }
 
-.navbar-bottom ul li a img {
-    width: 20px;
-    height: 20px;
+.navbar-bottom ul li i {
+    font-size: 20px;
     object-fit: contain;
+    margin-top: 7px;
+    
+}
+
+.navbar-bottom .bx {
+    margin-bottom: 6px;
+    margin-left: -6px;
+    font-size: 25px;
 }
 
 .navbar-bottom > ul > li > a:hover {
-    background-color: var(--highlight-navbar-hover);
+    color: var(--primary-highlight-color);
 }
 
 /* Active Tab */
 .navbar-bottom ul li a.active {
-    background-color: var(--primary-highlight-color);
-    color: white;
+    position: relative;
+    color: var(--primary-highlight-color);
+    background-color: transparent;
 }
+
+.navbar-bottom ul li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 1px;
+    background-color: var(--primary-highlight-color);
+}
+
 
 .products-menu .bx-chevron-down {
     transition: transform 0.3s ease-in;
@@ -155,13 +175,14 @@ body {
     transform: rotate(180deg);
 }
 
+/* DROPDOWN */
 .products-dropdown {
     position: absolute;
-    top: 119%;
+    top: 102%;
     left: -400%;
     right: 0;
     background-color: var(--primary-color);
-    height: 800%;
+    height: 600%;
     width: 1037%;
     z-index: 102;
 
@@ -186,6 +207,7 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
+
 
 .core-components-top {
     display: flex;
