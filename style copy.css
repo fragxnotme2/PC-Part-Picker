@@ -1,0 +1,264 @@
+/* Variables */
+:root {
+    --primary-color: #11131D;
+    --primary-secondary-color: #191B2A;
+    --primary-highlight-color: #E48435;
+    --primary-highlight-hover: #ffae6b;
+    --primary-highlight-button-hover: #c9742f;
+    --highlight-navbar-hover: #ffffff13;
+    --secondary-black-color: #000000af;
+    --secondary-white-color: #ffffffbd;
+    --white-color-hover: #ffffffe2;
+    --green-color: #28a745;
+    --green-color-hover: #1d7932;
+    --button-hover-bg: #e484351d;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: white;
+}
+
+/* Navbar */
+.navbar-top {
+    background-color: var(--primary-color);
+    padding: 1rem 5rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-left img {
+    width: 250px;
+    height: auto;
+    object-fit: contain;
+    max-height: 800%;
+}
+
+.navbar-left img:hover {
+    cursor: pointer;
+}
+
+.navbar-right ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.navbar-right ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -1rem;
+    height: 20px;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-right ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: color 0.1s ease;
+}
+
+.navbar-right ul li a:hover {
+    color: var(--primary-highlight-hover);
+}
+
+.bx {
+    font-size: 1.2rem;
+}
+
+.navbar-bottom {
+    background-color: var(--primary-secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 2rem;
+    position: relative;
+}
+
+.navbar-bottom ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    height: 60px;
+    justify-content: center;
+}
+
+.navbar-bottom ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-bottom ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar-bottom ul li a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.navbar-bottom > ul > li > a:hover {
+    background-color: var(--highlight-navbar-hover);
+}
+
+.navbar-bottom ul li a.active {
+    background-color: var(--primary-highlight-color);
+    color: white;
+}
+
+
+/* Products Dropdown */
+.products-dropdown {
+    position: absolute;
+    top: 119%;
+    left: -400%;
+    right: 0;
+    background-color: var(--primary-color);
+    height: 800%;
+    width: 1041%;
+}
+
+.core-components-top {
+    display: flex;
+}
+
+.core-components-top .component-card,
+.core-components-bottom .component-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-secondary-color);
+}
+
+.component-card {
+    background-color: var(--primary-color);
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 3px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+.component-card:hover {
+    background-color: var(--button-hover-bg);
+    outline: 1px solid var(--primary-highlight-color);
+}
+
+.component-card span {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.core-components-top .component-card img,
+.core-components-bottom .component-card img {
+    width: 60%;
+    height: 60%;
+}
+
+.core-components-top .component-card img {
+    width: 60%;
+    height: 60%;
+}
+
+.core-components-grid {
+    margin: 15px 30px 10px 80px;
+}
+
+.core-components-bottom {
+    display: flex;
+}
+
+.dropdown-sections {
+    display: flex;
+    margin-top: 20px;
+}
+
+.dropdown-section-left hr {
+    width: 200%;
+    opacity: 0.3;
+}
+.dropdown-section-right hr {
+    width: 160%;
+    opacity: 0.3;
+}
+
+.dropdown-sections a {
+   line-height: 0.5;
+}
+
+.products-dropdown .dropdown-sections h3 {
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.products-dropdown .dropdown-sections a {
+    font-size: 13px;
+    color: white;
+    text-align: left;
+    position: relative;
+    right: 20px;
+}
+.products-dropdown .dropdown-sections a:hover{
+    color: var(--primary-highlight-hover);
+}
+
+.products-dropdown  {
+    display: flex;
+}
+
+.dropdown-section .dropdown-section-list {
+    display: block;
+    color: green;
+}
+
+.dropdown-section .software {
+    margin-top: -15px;
+}
+
+.dropdown-section .accessories {
+    margin-top: 20px;
+}
+
+.dropdown-section-left {
+    margin-right: 200px;
+}

@@ -11,6 +11,7 @@
     --white-color-hover: #ffffffe2;
     --green-color: #28a745;
     --green-color-hover: #1d7932;
+    --button-hover-bg: #e484351d;
 }
 
 /* Global Styles */
@@ -35,6 +36,8 @@ body {
     justify-content: space-between;
     align-items: center;
     height: 60px;
+    position: relative;
+    z-index: 100;
 }
 
 .navbar-left {
@@ -98,6 +101,8 @@ body {
     background-color: var(--primary-secondary-color);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 0 2rem;
+    position: relative;
+    z-index: 99;
 }
 
 .navbar-bottom ul {
@@ -110,6 +115,7 @@ body {
 }
 
 .navbar-bottom ul li {
+    position: relative;
     display: flex;
     align-items: center;
 }
@@ -131,14 +137,181 @@ body {
     object-fit: contain;
 }
 
-.navbar-bottom ul li a:hover {
+.navbar-bottom > ul > li > a:hover {
     background-color: var(--highlight-navbar-hover);
 }
 
+/* Active Tab */
 .navbar-bottom ul li a.active {
     background-color: var(--primary-highlight-color);
     color: white;
 }
+
+.products-menu .bx-chevron-down {
+    transition: transform 0.3s ease-in;
+}
+
+.products-menu.show-dropdown .bx-chevron-down {
+    transform: rotate(180deg);
+}
+
+.products-dropdown {
+    position: absolute;
+    top: 119%;
+    left: -400%;
+    right: 0;
+    background-color: var(--primary-color);
+    height: 800%;
+    width: 1037%;
+    z-index: 102;
+
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+/* When dropdown is visible */
+.products-menu.show-dropdown .products-dropdown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+
+.products-menu.show-dropdown .products-dropdown {
+    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.core-components-top {
+    display: flex;
+}
+
+.core-components-top .component-card,
+.core-components-bottom .component-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-secondary-color);
+}
+
+.component-card {
+    background-color: var(--primary-color);
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 3px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 1s ease;
+}
+.component-card:hover {
+    background-color: var(--button-hover-bg);
+    outline: 1px solid var(--primary-highlight-color);
+}
+
+.component-card span {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.core-components-top .component-card img,
+.core-components-bottom .component-card img {
+    width: 60%;
+    height: 60%;
+}
+
+.core-components-top .component-card img {
+    width: 60%;
+    height: 60%;
+}
+
+.core-components-grid {
+    margin: 15px 30px 10px 80px;
+}
+
+.core-components-bottom {
+    display: flex;
+}
+
+.dropdown-sections {
+    display: flex;
+    margin-top: 20px;
+}
+
+.dropdown-section h3 {
+    margin: 5px 0px;
+}
+
+.dropdown-section-left hr {
+    width: 160%;
+    height: 0.5px;
+    background-color: white;
+    border: none;
+    opacity: 0.3;
+    margin: 0px 0px;
+}
+.dropdown-section-right hr {
+    width: 160%;
+    height: 0.5px;
+    background-color: white;
+    border: none;
+    opacity: 0.3;
+    margin: 0px 0px;
+}
+
+.dropdown-sections a {
+   line-height: 0.3;
+}
+
+.products-dropdown .dropdown-sections h3 {
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.products-dropdown .dropdown-sections a {
+    font-size: 12px;
+    color: white;
+    text-align: left;
+    position: relative;
+    right: 20px;
+}
+.products-dropdown .dropdown-sections a:hover{
+    color: var(--primary-highlight-hover);
+}
+
+.products-dropdown  {
+    display: flex;
+}
+
+.dropdown-section .dropdown-section-list {
+    display: block;
+    color: green;
+}
+
+.dropdown-section .displays {
+    margin-top: 15px;
+}
+
+.dropdown-section .software {
+    margin-top: -15px;
+}
+
+.dropdown-section .accessories {
+    margin-top: 20px;
+}
+
+.dropdown-section-left {
+    margin-right: 200px;
+    margin-top: -5px;
+}
+
 
 /* Hero Section */
 .hero-section {
