@@ -30,7 +30,7 @@ body {
 /* Navbar */
 .navbar-top {
     background-color: var(--primary-color);
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
@@ -185,6 +185,7 @@ body {
     height: 600%;
     width: 1037%;
     z-index: 102;
+    padding-top: 1px;
 
     opacity: 0;
     transform: translateY(-15px);
@@ -243,8 +244,11 @@ body {
 
 .core-components-top .component-card img,
 .core-components-bottom .component-card img {
-    width: 60%;
-    height: 60%;
+    width: 100%;        
+    height: auto;       
+    max-width: 80px;    /* control how big it can get */
+    object-fit: contain; 
+    /* background-color: grey; */
 }
 
 .core-components-top .component-card img {
@@ -269,12 +273,13 @@ body {
     margin: 5px 0px;
 }
 
+
 .dropdown-section-left hr {
-    width: 160%;
+    width: 210%;
     height: 0.5px;
     background-color: white;
     border: none;
-    opacity: 0.3;
+    opacity: 0.2;
     margin: 0px 0px;
 }
 .dropdown-section-right hr {
@@ -282,7 +287,7 @@ body {
     height: 0.5px;
     background-color: white;
     border: none;
-    opacity: 0.3;
+    opacity: 0.2;
     margin: 0px 0px;
 }
 
@@ -333,7 +338,9 @@ body {
     margin-right: 200px;
     margin-top: -5px;
 }
-
+.dropdown-section-right .dropdown-section h3 {
+    margin-top: 0px;
+}
 
 /* Hero Section */
 .hero-section {
@@ -375,15 +382,15 @@ body {
     background-color: var(--primary-highlight-color);
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 3px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     transition: background-color font-weight 0.1s ease;
 }
 
@@ -391,10 +398,10 @@ body {
     background-color: var(--primary-highlight-button-hover);
 }
 
-.herosection-left button img {
-    width: 30px;
-    height: 30px;
-    object-fit: contain;
+.herosection-left button i {
+    font-size: 25px;
+    margin-top: 6px;
+    color: white;
 }
 
 /* Completed Builds Section */
@@ -429,15 +436,15 @@ body {
     background-color: var(--primary-highlight-color);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 3px 20px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 20px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 10px;
     transition: background-color 0.1s ease;
 }
 
@@ -445,10 +452,10 @@ body {
     background-color: var(--primary-highlight-button-hover);
 }
 
-.completed-builds-left button img {
-    width: 35px;
-    height: 35px;
-    object-fit: contain;
+.completed-builds-left i {
+    font-size: 25px;
+    margin-top: 6px;
+    color: white;
 }
 
 .completed-builds-right {
@@ -472,27 +479,30 @@ body {
     cursor: pointer;
 }
 
-.featuredcards .build-info h4,
-.featuredcards .build-info p,
-.featuredcards .username h5,
-.featuredcards .build-info-bottom i {
+.build-info-bottom,
+.featuredcards .build-info p{
     color: black;
 }
+
+.featuredcards .build-info-bottom i {
+    color: var(--secondary-black-color);
+}
+
 
 .featuredcards:hover .build-info-top h4 {
     color: var(--primary-highlight-color);
     transition: color 0.2s ease;
 }
 
-.featured-label img {
-    width: 20px;
-    height: 20px;
-    object-fit: contain;
+.featured-label i {
+    font-size: 20px;
+    margin-top: 6px;
+    color: white;
 }
 
 .featured-label h3 {
     font-size: 14px;
-    font-weight: 00;
+    font-weight: 600;
     color: white;
 }
 
@@ -506,7 +516,7 @@ body {
     top: 10px;
     left: 10px;
     background-color: var(--primary-highlight-color);
-    padding: 8px 12px;
+    padding: 1px 12px;
     border-radius: 5px;
     display: flex;
     align-items: center;
@@ -734,9 +744,10 @@ hr {
 
 .recommended-build-left h2 {
     color: white;
-    font-size: 28px;
+    font-size: 30px;
     font-weight: 700;
     margin-top: -5px;
+    line-height: 1;
 }
 
 .recommended-build-left .specs {
@@ -964,324 +975,4 @@ footer {
 
 .footer-section ul li a:hover {
     color: var(--primary-highlight-color);
-}
-
-/* System Builder */
-.system-builder {
-    min-height: calc(100vh - 120px);
-    background-color: white;
-}
-
-.builder-header {
-    background-color: var(--primary-color);
-    padding: 1rem 0;
-    text-align: center;
-}
-
-.builder-header h1 {
-    font-size: 45px;
-    color: white;
-    margin: 10px 0 5px 0;
-    font-weight: 600;
-}
-
-.builder-tabs {
-    display: inline-flex;
-    background-color: white;
-    padding: 3px;
-    border-radius: 4px;
-    position: relative;
-    margin-bottom: 15px;
-}
-
-.builder-tab {
-    padding: 8px 20px;
-    border: none;
-    background: none;
-    color: var(--primary-color);
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: all 0.2s ease;
-    font-size: 15px;
-}
-
-.builder-tab:hover {
-    color: var(--primary-highlight-color);
-}
-
-.builder-tab.active {
-    background-color: var(--primary-color);
-    color: white;
-}
-
-.system-status {
-    padding: 0 5rem;
-    margin-top: 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.status-bar {
-    background-color: var(--primary-secondary-color);
-    border-radius: 8px;
-    padding: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
-    margin-right: 2rem;
-}
-
-.compatibility-status {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: white;
-    padding-left: 1rem;
-}
-
-.compatibility-status i {
-    font-size: 25px;
-    color: greenyellow;
-}
-
-.wattage-status {
-    display: flex;
-    align-items: center;
-    color: white;
-    background-color: var(--primary-highlight-color);
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    font-weight: 550;
-    gap: 0.3rem;
-}
-
-.wattage-status img {
-    width: 25px;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.save-as-btn, .start-new-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 2rem;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: all 0.2s ease;
-}
-
-.save-as-btn {
-    background-color: var(--primary-highlight-color);
-    color: white;
-}
-
-.save-as-btn:hover {
-    background-color: var(--primary-highlight-button-hover);
-}
-
-.start-new-btn {
-    background-color: var(--primary-highlight-color);
-    color: white;
-    gap: 0.3rem;
-}
-
-.start-new-btn:hover {
-    background-color: var(--primary-highlight-button-hover);
-}
-
-.save-as-btn .bx {
-    font-size: 25px;
-}
-
-.start-new-btn .bx {
-    font-size: 25px;
-}
-
-/* Builder Table */
-.builder-table {
-    background-color: white;
-    margin: 0 5rem 2rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.builder-table table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-.builder-table th {
-    background-color: var(--primary-color);
-    color: white;
-    text-align: left;
-    padding: 1rem;
-    font-weight: 500;
-    font-size: 0.9rem;
-}
-
-.builder-table td {
-    padding: 1rem;
-    border-bottom: 1px solid #eee;
-    font-size: 0.9rem;
-}
-
-.component-type {
-    width: 120px;
-}
-
-.component-link {
-    color: var(--primary-highlight-color);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.selection-cell {
-    min-width: 400px;
-}
-
-.selected-part {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.selected-part img {
-    width: 50px;
-    height: 50px;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.part-details a {
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-.availability {
-    color: var(--primary-color);
-    font-weight: 400;
-}
-
-.price {
-    color: var(--green-color);
-    font-weight: 600;
-}
-
-.merchant img {
-    height: 35px;
-    width: auto;
-}
-
-.actions {
-    display: flex;
-    gap: 0.5rem;
-}
-
-.buy-btn {
-    background-color: var(--green-color);
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.2s ease;
-}
-
-.buy-btn:hover {
-    background-color: var(--green-color-hover);
-}
-
-.remove-btn {
-    background-color: transparent;
-    border: 1px solid #dc3545;
-    color: #dc3545;
-    width: 32px;
-    height: 36px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.remove-btn:hover {
-    background-color: #dc3545;
-    color: white;
-}
-
-.add-component-row button {
-    width: 100%;
-    padding: 0.75rem;
-    background-color: transparent;
-    border: 1px solid var(--primary-highlight-color);
-    color: var(--primary-highlight-color);
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.add-component-row button:hover {
-    background-color: var(--primary-highlight-color);
-    color: white;
-}
-
-.add-component-row button i {
-    font-size: 1.2rem;
-}
-
-.builder-footer {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-    padding: 1rem 5rem 8rem 0;
-}
-
-.total-price {
-    font-size: 1.2rem;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-.total-price .price {
-    font-size: 2rem;
-}
-
-.buy-from {
-    background-color: var(--green-color);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: background-color 0.2s ease;
-}
-
-.buy-from:hover {
-    background-color: var(--green-color-hover);
 }

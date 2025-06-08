@@ -1,0 +1,344 @@
+/* Variables */
+:root {
+    --primary-color: #11131D;
+    --primary-secondary-color: #191B2A;
+    --primary-highlight-color: #E48435;
+    --primary-highlight-hover: #ffae6b;
+    --primary-highlight-button-hover: #c9742f;
+    --highlight-navbar-hover: #ffffff13;
+    --secondary-black-color: #000000af;
+    --secondary-white-color: #ffffffbd;
+    --white-color-hover: #ffffffe2;
+    --green-color: #28a745;
+    --green-color-hover: #1d7932;
+    --button-hover-bg: #e484351d;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* System Builder */
+.system-builder {
+    min-height: calc(100vh - 120px);
+    background-color: white;
+}
+
+.builder-header {
+    background-color: var(--primary-secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.builder-header h1 {
+    font-size: 45px;
+    color: white;
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+
+.builder-tabs {
+    display: inline-flex;
+    background-color: white;
+    padding: 3px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.builder-tab {
+    padding: 8px 20px;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 15px;
+}
+
+.builder-tab:hover {
+    color: var(--primary-highlight-color);
+}
+
+.builder-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.system-status {
+    padding: 0 5rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.status-bar {
+    background-color: var(--primary-secondary-color);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.compatibility-status {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    padding-left: 1rem;
+}
+
+.compatibility-status i {
+    font-size: 25px;
+    color: greenyellow;
+}
+
+.wattage-status {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: var(--primary-highlight-color);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 550;
+    gap: 0.3rem;
+}
+
+.wattage-status img {
+    width: 25px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.save-as-btn, .start-new-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.save-as-btn {
+    background-color: var(--primary-highlight-color);
+    color: white;
+}
+
+.save-as-btn:hover {
+    background-color: var(--primary-highlight-button-hover);
+}
+
+.start-new-btn {
+    background-color: var(--primary-highlight-color);
+    color: white;
+    gap: 0.3rem;
+}
+
+.start-new-btn:hover {
+    background-color: var(--primary-highlight-button-hover);
+}
+
+.save-as-btn .bx {
+    font-size: 25px;
+}
+
+.start-new-btn .bx {
+    font-size: 25px;
+}
+
+/* Builder Table */
+.builder-table {
+    background-color: white;
+    margin: 0 5rem 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.builder-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.builder-table th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.builder-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.component-type {
+    width: 120px;
+}
+
+.component-link {
+    color: var(--primary-highlight-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.selection-cell {
+    min-width: 400px;
+}
+
+.selected-part {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selected-part img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.part-details a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.availability {
+    color: var(--primary-color);
+    font-weight: 400;
+}
+
+.price {
+    color: var(--green-color);
+    font-weight: 600;
+}
+
+.merchant img {
+    height: 35px;
+    width: auto;
+}
+
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.buy-btn {
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.buy-btn:hover {
+    background-color: var(--green-color-hover);
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+    color: #dc3545;
+    width: 32px;
+    height: 36px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background-color: #dc3545;
+    color: white;
+}
+
+.add-component-row button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: transparent;
+    border: 1px solid var(--primary-highlight-color);
+    color: var(--primary-highlight-color);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.add-component-row button:hover {
+    background-color: var(--primary-highlight-color);
+    color: white;
+}
+
+.add-component-row button i {
+    font-size: 1.2rem;
+}
+
+.builder-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem 5rem 8rem 0;
+}
+
+.total-price {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.total-price .price {
+    font-size: 2rem;
+}
+
+.buy-from {
+    background-color: var(--green-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.buy-from:hover {
+    background-color: var(--green-color-hover);
+}

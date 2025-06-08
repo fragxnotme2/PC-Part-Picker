@@ -1,3 +1,99 @@
+/* Variables */
+:root {
+    --primary-color: #11131D;
+    --primary-secondary-color: #191B2A;
+    --primary-highlight-color: #E48435;
+    --primary-highlight-hover: #ffae6b;
+    --primary-highlight-button-hover: #c9742f;
+    --highlight-navbar-hover: #ffffff13;
+    --secondary-black-color: #000000af;
+    --secondary-white-color: #ffffffbd;
+    --white-color-hover: #ffffffe2;
+    --green-color: #28a745;
+    --green-color-hover: #1d7932;
+    --button-hover-bg: #e484351d;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.builder-header {
+    background-color: var(--primary-secondary-color);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.builder-header h1 {
+    font-size: 45px;
+    color: white;
+    margin: 10px 0 5px 0;
+    font-weight: 600;
+}
+
+.builder-tabs {
+    display: inline-flex;
+    background-color: white;
+    padding: 3px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.builder-tab {
+    padding: 8px 20px;
+    border: none;
+    background: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    font-size: 15px;
+}
+
+.builder-tab:hover {
+    color: var(--primary-highlight-color);
+}
+
+.builder-tab.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Builder Table */
+.builder-table {
+    background-color: white;
+    margin: 0 5rem 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.builder-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.builder-table th {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: left;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.builder-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
 /* Price By Merchant Styles */
 .builder-table.merchant-view table {
     width: 100%;

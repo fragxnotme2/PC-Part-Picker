@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>System Builder - PC Part Picker</title>
+    <title>Choose A CPU - PC Part Picker</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../product-list.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <body>
     <!-- Navbar -->
@@ -140,6 +143,156 @@
         </ul>
     </div>
 
+    <!-- Product List Section -->
+    <div class="product-list">
+        <div class="page-header">
+            <h1>Choose A CPU</h1>
+        </div>
+
+        <div class="product-content">
+            <!-- Left Sidebar -->
+            <div class="sidebar">
+                <div class="part-list-summary">
+                    <div class="part-list-heading">
+                        <img src="../images/logo-orange.png" alt="Part List">
+                    </div>
+                    <div class="summary-stats">
+                        <div class="compatibility-checkbox">
+                            <input type="checkbox" id="compatibility" checked>
+                            <label for="compatibility">Compatibility Filter</label>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">PARTS</span>
+                            <span class="stat-value">5</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">TOTAL</span>
+                            <span class="stat-value">$1151.98</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">ESTIMATED WATTAGE</span>
+                            <span class="stat-value">432W</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filters-section">
+                    <div class="filter-group">
+                        <h3>Merchants / Pricing</h3>
+                        <hr>
+                        <div class="merchant-options">
+                            <label>MERCHANTS</label>
+                            <i class='bx bx-plus'></i>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="filter-group">
+                        <h3>Filters</h3>
+                        <hr>
+                        <div class="price-filter">
+                            <h4>PRICE</h4>
+                            <div class="price-range">
+                                <input type="range" min="0" max="2720" value="2720">
+                                <div class="price-inputs">
+                                    <input type="number" value="0" min="0" max="2720">
+                                    <span>-</span>
+                                    <input type="number" value="2720" min="0" max="2720">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content -->
+            <div class="product-table">
+                <div class="table-header">
+                    <div class="header-left">
+                        <span>33 Compatible Products</span>
+                        <div class="header-actions">
+                            <button>Select All</button>
+                            <button>Select None</button>
+                            <button>Compare Selected</button>
+                        </div>
+                    </div>
+                    <div class="header-right">
+                        <button class="price-alert">Set Price Alert</button>
+                        <button class="add-filter">Add From Filter</button>
+                    </div>
+                </div>
+
+                <table class="products-table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><i class="fi fi-rr-angle-small-up"></i>Name</th>
+                            <th><i class="fi fi-rs-angle-small-down"></i>Core Count</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>Performance Core Clock</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>Performance Core Boost Clock</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>Microarchitecture</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>TDP</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>Integrated Graphics</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>Rating</th>
+                            <th><i class="fi fi-rr-angle-small-down"></i>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1st Product -->
+                        <tr>     
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <div class="product-name">
+                                    <img src="../images/computer-parts/cover-photo/cpu.png" alt="AMD Ryzen 7 7800X3D">
+                                    <a href="../product/cpu/AMD-Ryzen-7-7800X3D.html">AMD Ryzen 7 7800X3D</a>
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>4.7 GHz</td>
+                            <td>5.2 GHz</td>
+                            <td>Zen 5</td>
+                            <td>120W</td>
+                            <td>Radeon</td>
+                            <td>
+                                <div class="rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>(175)</span>
+                                </div>
+                            </td>
+                            <td>$472.02</td>
+                            <td><button class="add-btn">Add</button></td>
+                        </tr>
+                        <!-- 1st Product -->
+                        <tr>     
+                            <td><input type="checkbox"></td>
+                            <td>
+                                <div class="product-name">
+                                    <a href="product/cpu/AMD Ryzen 7 7800X3D.html">
+                                        <img src="../images/computer-parts/cover-photo/cpu.png" alt="AMD Ryzen 7 7800X3D">
+                                        <span>AMD Ryzen 7 7800X3D</span>
+                                    </a>
+                                </div>
+                            </td>
+                            <td>8</td>
+                            <td>4.7 GHz</td>
+                            <td>5.2 GHz</td>
+                            <td>Zen 5</td>
+                            <td>120W</td>
+                            <td>Radeon</td>
+                            <td>
+                                <div class="rating">
+                                    <div class="stars">★★★★★</div>
+                                    <span>(175)</span>
+                                </div>
+                            </td>
+                            <td>$472.02</td>
+                            <td><button class="add-btn">Add</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer>
